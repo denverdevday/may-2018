@@ -46,8 +46,8 @@
     	function nav(id) {
             var elements = Array.prototype.slice.call(document.getElementsByClassName('container-fluid'));
             elements && elements
-               .filter(function (e) { return !(e.id === 'logo' || e.id === 'menu'); })
-               .forEach(function (e) { e.style.display = e.id === id ? 'block' : 'none'; });
+               .filter(function (e) { return !(e.id === 'logo' || e.id === 'menu' ); })
+               .forEach(function (e) { e.style.display = e.id === id || e.id === 'sponsors' && id === 'home' ? 'block' : 'none'; });
         }
         
         document.onreadystatechange = function () {
@@ -79,7 +79,7 @@
             <a href="https://sessionize.com/denverdevday-summer2018/">Call for speakers</a>
         </div>
         <div class="col-md-auto">
-            <a href="#sponsors" onclick="nav('sponsors')">Provide sponsorship</a>
+            <a href="#provide" onclick="nav('provide')">Provide sponsorship</a>
         </div>
     </div>
 </div>
@@ -98,8 +98,8 @@
     step up&nbsp;&ndash; let this year be the year you submit a talk to Denver Dev Day.</p>
 </div>
 
-<div id="sponsors" class="container-fluid mt-5 mb-5">
-    <a name="sponsors"></a>
+<div id="provide" class="container-fluid mt-5 mb-5">
+    <a name="provide"></a>
     <h2>Provide Sponsorship</h2>
     <p class="text-justify">Denver Dev Day is free, open to the public, and packed with 
     practical training and information on software development. We anticipate around 
@@ -200,6 +200,11 @@ and in-kind donations are due two weeks prior to the event. Payment can be made
 via Paypal or check. Items to be included in the attendee bags should be delivered 
 two weeks before the event date to ensure they are included. Items will be limited 
 to one promotional item (flyer, printout, software, etc&#133;).</p>
+</div>
+
+<div id="sponsors" class="container-fluid mt-5 mb-5">
+    <a name="sponsors"></a>
+    <h2>Sponsors</h2>
 
     <div class="container text-center">
         <div class="row align-items-center">
@@ -208,10 +213,6 @@ to one promotional item (flyer, printout, software, etc&#133;).</p>
             </div>
         </div>
     </div>
-</div>
-
-<div>
-    <!-- Footer? -->
 </div>
 
 </div>
