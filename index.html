@@ -52,9 +52,14 @@
         
         document.onreadystatechange = function () {
           if (document.readyState === 'interactive') {
-            nav('home');
+            nav(location.hash.slice(1) || 'home');
           }
         };
+
+        window.onhashchange = function (e) {
+           nav(e.newURL.split('#', 2)[1] || 'home');
+        };
+        
     </script>
 </head>
 
