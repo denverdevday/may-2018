@@ -46,7 +46,7 @@
     	function nav(id) {
             var elements = Array.prototype.slice.call(document.getElementsByClassName('container-fluid'));
             elements && elements
-               .filter(function (e) { return !(e.id === 'logo' || e.id === 'menu' ); })
+               .filter(function (e) { return !(e.id === 'logo' || e.id === 'menu' || e.id === 'schedule' ); })
                .forEach(function (e) { e.style.display = e.id === id || e.id === 'sponsors' && id === 'home' ? 'block' : 'none'; });
         }
         
@@ -81,7 +81,7 @@
 <div id="menu" class="container-fluid mt-3 mb-3">
     <div class="row justify-content-md-center">
         <div class="col-md-auto">
-            <a href="https://sessionize.com/denverdevday-summer2018/">Call for speakers</a>
+            <a href="#schedule">Schedule</a>
         </div>
         <div class="col-md-auto">
             <a href="#provide" onclick="nav('provide')">Provide sponsorship</a>
@@ -103,6 +103,10 @@
     step up&nbsp;&ndash; let this year be the year you submit a talk to Denver Dev Day.</p>
 </div>
 
+<div id="schedule" class="container-fluid mt-5 mb-5">
+    <script type="text/javascript" src="https://sessionize.com/api/v2/58pkr3bz/view/gridtable"></script>
+</div>
+    
 <div id="provide" class="container-fluid mt-5 mb-5">
     <a name="provide"></a>
     <h2>Provide Sponsorship</h2>
