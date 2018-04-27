@@ -6,61 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./ddd.css">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <style type="text/css">
-        @media (max-width: 575px) { .body-wrap: max-width: 575px }
-        @media (min-width: 576px) and (max-width: 767px) { .body-wrap: max-width: 575px }
-        @media (min-width: 768px) and (max-width: 991px) { .body-wrap: max-width: 768px }
-        @media (min-width: 992px) and (max-width: 1199px) { .body-wrap: max-width: 768px }
-        @media (min-width: 1200px) { .body-wrap: max-width: 768px }
-
-        img.mr-3.small {
-            width: 100px;
-            height: 100px;
-        }
-        img.mr-3.ssmall {
-            width: 50px;
-            height: 50px;
-        }
-        small.text-muted:before {
-            content: ' ';
-            display: block;
-        }
-        .fa {
-            padding: 3px;
-            font-size: 12px;
-            width: 20px;
-            text-align: center;
-            text-decoration: none;
-        }
-        .fa:hover {
-            opacity: 0.7;
-            text-decoration: none;
-        }
-        .fa-twitter {
-            background: #55ACEE;
-            color: white;
-        }
-    </style>
-    <script  type="text/javascript">
-    	function nav(id) {
-            var elements = Array.prototype.slice.call(document.getElementsByClassName('container-fluid'));
-            elements && elements
-               .filter(function (e) { return !(e.id === 'logo' || e.id === 'menu' || e.id === 'schedule' ); })
-               .forEach(function (e) { e.style.display = e.id === id || e.id === 'sponsors' && id === 'home' ? 'block' : 'none'; });
-        }
-        
-        document.onreadystatechange = function () {
-          if (document.readyState === 'interactive') {
-            nav(location.hash.slice(1) || 'home');
-          }
-        };
-
-        window.onhashchange = function (e) {
-           nav(e.newURL.split('#', 2)[1] || 'home');
-        };
-        
-    </script>
 </head>
 
 <body>
@@ -68,7 +15,7 @@
 <div class="container body-wrap">
 
 <div id="logo" class="container-fluid text-center">
-    <a href="#" onclick="nav('home')"><img src="assets/denverdevday.png" class="img-fluid text-center" alt="Denver Dev Day"/></a>
+    <a href="./index.html"><img src="./assets/denverdevday.png" class="img-fluid text-center" alt="Denver Dev Day"/></a>
     <h1>Denver&nbsp;Dev&nbsp;Day</h1>
     <h3 class="text-center">May&nbsp;4,&nbsp;2018</h3>
     <address>
@@ -90,7 +37,10 @@
             <a href="#">Speakers</a>
         </div>
         <div class="col-md-auto">
-            <a href="./index.html#provide">Provide sponsorship</a>
+            <a href="./index.html#sponsors">Sponsors</a>
+        </div>
+        <div class="col-md-auto">
+            <a href="./sponsorship.html#provide">Provide sponsorship</a>
         </div>
     </div>
 </div>
