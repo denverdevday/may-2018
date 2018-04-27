@@ -673,7 +673,6 @@
 }
 
 #sessionize .sz-gridtable td, #sessionize .sz-gridtable th {
-    width: 1000px;
     border-bottom: 1px solid #E6E6E6;
     padding: 16px 24px;
     vertical-align: top
